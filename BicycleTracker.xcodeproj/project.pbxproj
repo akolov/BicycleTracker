@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAD3C2D11AAF905E0072213F /* HKUnit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C2D01AAF905E0072213F /* HKUnit+Extensions.swift */; };
 		FAF84C061AAF7B5500CFC255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */; };
 		FAF84C091AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C071AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld */; };
 		FAF84C0B1AAF7B5500CFC255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C0A1AAF7B5500CFC255 /* ViewController.swift */; };
@@ -14,6 +15,21 @@
 		FAF84C101AAF7B5500CFC255 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C0F1AAF7B5500CFC255 /* Images.xcassets */; };
 		FAF84C131AAF7B5500CFC255 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C111AAF7B5500CFC255 /* LaunchScreen.xib */; };
 		FAF84C1F1AAF7B5500CFC255 /* BicycleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C1E1AAF7B5500CFC255 /* BicycleTrackerTests.swift */; };
+		FAF84C341AAF7C6700CFC255 /* GaugesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C331AAF7C6700CFC255 /* GaugesInterfaceController.swift */; };
+		FAF84C361AAF7C6700CFC255 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C351AAF7C6700CFC255 /* NotificationController.swift */; };
+		FAF84C381AAF7C6700CFC255 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C371AAF7C6700CFC255 /* Images.xcassets */; };
+		FAF84C3C1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C3B1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app */; };
+		FAF84C441AAF7C6700CFC255 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C421AAF7C6700CFC255 /* Interface.storyboard */; };
+		FAF84C461AAF7C6700CFC255 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C451AAF7C6700CFC255 /* Images.xcassets */; };
+		FAF84C491AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAF84C2E1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAF84C521AAF825100CFC255 /* StartInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C511AAF825100CFC255 /* StartInterfaceController.swift */; };
+		FAF84C541AAF829900CFC255 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C531AAF829900CFC255 /* Configuration.swift */; };
+		FAF84C5F1AAF880F00CFC255 /* HealthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FAF84C5E1AAF880F00CFC255 /* HealthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAF84C651AAF880F00CFC255 /* HealthManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */; };
+		FAF84C6E1AAF880F00CFC255 /* HealthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C6D1AAF880F00CFC255 /* HealthManagerTests.swift */; };
+		FAF84C711AAF880F00CFC255 /* HealthManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */; };
+		FAF84C721AAF880F00CFC255 /* HealthManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAF84C7B1AAF882700CFC255 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C7A1AAF882700CFC255 /* HealthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +40,70 @@
 			remoteGlobalIDString = FAF84BFF1AAF7B5500CFC255;
 			remoteInfo = BicycleTracker;
 		};
+		FAF84C3D1AAF7C6700CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84C3A1AAF7C6700CFC255;
+			remoteInfo = "BicycleTracker WatchKit App";
+		};
+		FAF84C471AAF7C6700CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84C2D1AAF7C6700CFC255;
+			remoteInfo = "BicycleTracker WatchKit Extension";
+		};
+		FAF84C661AAF880F00CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84C591AAF880F00CFC255;
+			remoteInfo = HealthManager;
+		};
+		FAF84C681AAF880F00CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84BFF1AAF7B5500CFC255;
+			remoteInfo = BicycleTracker;
+		};
+		FAF84C6F1AAF880F00CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84C591AAF880F00CFC255;
+			remoteInfo = HealthManager;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FAF84C501AAF7C6700CFC255 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAF84C491AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C761AAF881000CFC255 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAF84C721AAF880F00CFC255 /* HealthManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FAD3C2D01AAF905E0072213F /* HKUnit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKUnit+Extensions.swift"; sourceTree = "<group>"; };
 		FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF84C041AAF7B5500CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +115,25 @@
 		FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BicycleTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF84C1D1AAF7B5500CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF84C1E1AAF7B5500CFC255 /* BicycleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicycleTrackerTests.swift; sourceTree = "<group>"; };
+		FAF84C2E1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BicycleTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C311AAF7C6700CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C321AAF7C6700CFC255 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FAF84C331AAF7C6700CFC255 /* GaugesInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugesInterfaceController.swift; sourceTree = "<group>"; };
+		FAF84C351AAF7C6700CFC255 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FAF84C371AAF7C6700CFC255 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAF84C3B1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BicycleTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C411AAF7C6700CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C431AAF7C6700CFC255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FAF84C451AAF7C6700CFC255 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAF84C511AAF825100CFC255 /* StartInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartInterfaceController.swift; sourceTree = "<group>"; };
+		FAF84C531AAF829900CFC255 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HealthManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C5D1AAF880F00CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C5E1AAF880F00CFC255 /* HealthManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthManager.h; sourceTree = "<group>"; };
+		FAF84C641AAF880F00CFC255 /* HealthManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C6C1AAF880F00CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C6D1AAF880F00CFC255 /* HealthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManagerTests.swift; sourceTree = "<group>"; };
+		FAF84C7A1AAF882700CFC255 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF84C711AAF880F00CFC255 /* HealthManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +149,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C2B1AAF7C6700CFC255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C561AAF880F00CFC255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C611AAF880F00CFC255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C651AAF880F00CFC255 /* HealthManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +182,10 @@
 			children = (
 				FAF84C021AAF7B5500CFC255 /* BicycleTracker */,
 				FAF84C1B1AAF7B5500CFC255 /* BicycleTrackerTests */,
+				FAF84C2F1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */,
+				FAF84C3F1AAF7C6700CFC255 /* BicycleTracker WatchKit App */,
+				FAF84C5B1AAF880F00CFC255 /* HealthManager */,
+				FAF84C6A1AAF880F00CFC255 /* HealthManagerTests */,
 				FAF84C011AAF7B5500CFC255 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +195,10 @@
 			children = (
 				FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */,
 				FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */,
+				FAF84C2E1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex */,
+				FAF84C3B1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app */,
+				FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */,
+				FAF84C641AAF880F00CFC255 /* HealthManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +242,94 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FAF84C2F1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C511AAF825100CFC255 /* StartInterfaceController.swift */,
+				FAF84C331AAF7C6700CFC255 /* GaugesInterfaceController.swift */,
+				FAF84C351AAF7C6700CFC255 /* NotificationController.swift */,
+				FAF84C531AAF829900CFC255 /* Configuration.swift */,
+				FAF84C371AAF7C6700CFC255 /* Images.xcassets */,
+				FAF84C301AAF7C6700CFC255 /* Supporting Files */,
+			);
+			path = "BicycleTracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FAF84C301AAF7C6700CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C311AAF7C6700CFC255 /* Info.plist */,
+				FAF84C321AAF7C6700CFC255 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF84C3F1AAF7C6700CFC255 /* BicycleTracker WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C421AAF7C6700CFC255 /* Interface.storyboard */,
+				FAF84C451AAF7C6700CFC255 /* Images.xcassets */,
+				FAF84C401AAF7C6700CFC255 /* Supporting Files */,
+			);
+			path = "BicycleTracker WatchKit App";
+			sourceTree = "<group>";
+		};
+		FAF84C401AAF7C6700CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C411AAF7C6700CFC255 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF84C5B1AAF880F00CFC255 /* HealthManager */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C5E1AAF880F00CFC255 /* HealthManager.h */,
+				FAF84C7A1AAF882700CFC255 /* HealthManager.swift */,
+				FAD3C2D01AAF905E0072213F /* HKUnit+Extensions.swift */,
+				FAF84C5C1AAF880F00CFC255 /* Supporting Files */,
+			);
+			path = HealthManager;
+			sourceTree = "<group>";
+		};
+		FAF84C5C1AAF880F00CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C5D1AAF880F00CFC255 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF84C6A1AAF880F00CFC255 /* HealthManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C6D1AAF880F00CFC255 /* HealthManagerTests.swift */,
+				FAF84C6B1AAF880F00CFC255 /* Supporting Files */,
+			);
+			path = HealthManagerTests;
+			sourceTree = "<group>";
+		};
+		FAF84C6B1AAF880F00CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C6C1AAF880F00CFC255 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FAF84C571AAF880F00CFC255 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C5F1AAF880F00CFC255 /* HealthManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */ = {
@@ -125,10 +339,14 @@
 				FAF84BFC1AAF7B5500CFC255 /* Sources */,
 				FAF84BFD1AAF7B5500CFC255 /* Frameworks */,
 				FAF84BFE1AAF7B5500CFC255 /* Resources */,
+				FAF84C501AAF7C6700CFC255 /* Embed App Extensions */,
+				FAF84C761AAF881000CFC255 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FAF84C481AAF7C6700CFC255 /* PBXTargetDependency */,
+				FAF84C701AAF880F00CFC255 /* PBXTargetDependency */,
 			);
 			name = BicycleTracker;
 			productName = BicycleTracker;
@@ -153,6 +371,76 @@
 			productReference = FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FAF84C2D1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C4D1AAF7C6700CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker WatchKit Extension" */;
+			buildPhases = (
+				FAF84C2A1AAF7C6700CFC255 /* Sources */,
+				FAF84C2B1AAF7C6700CFC255 /* Frameworks */,
+				FAF84C2C1AAF7C6700CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF84C3E1AAF7C6700CFC255 /* PBXTargetDependency */,
+			);
+			name = "BicycleTracker WatchKit Extension";
+			productName = "BicycleTracker WatchKit Extension";
+			productReference = FAF84C2E1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		FAF84C3A1AAF7C6700CFC255 /* BicycleTracker WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C4A1AAF7C6700CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker WatchKit App" */;
+			buildPhases = (
+				FAF84C391AAF7C6700CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BicycleTracker WatchKit App";
+			productName = "BicycleTracker WatchKit App";
+			productReference = FAF84C3B1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		FAF84C591AAF880F00CFC255 /* HealthManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C731AAF881000CFC255 /* Build configuration list for PBXNativeTarget "HealthManager" */;
+			buildPhases = (
+				FAF84C551AAF880F00CFC255 /* Sources */,
+				FAF84C561AAF880F00CFC255 /* Frameworks */,
+				FAF84C571AAF880F00CFC255 /* Headers */,
+				FAF84C581AAF880F00CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthManager;
+			productName = HealthManager;
+			productReference = FAF84C5A1AAF880F00CFC255 /* HealthManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAF84C631AAF880F00CFC255 /* HealthManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C771AAF881000CFC255 /* Build configuration list for PBXNativeTarget "HealthManagerTests" */;
+			buildPhases = (
+				FAF84C601AAF880F00CFC255 /* Sources */,
+				FAF84C611AAF880F00CFC255 /* Frameworks */,
+				FAF84C621AAF880F00CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF84C671AAF880F00CFC255 /* PBXTargetDependency */,
+				FAF84C691AAF880F00CFC255 /* PBXTargetDependency */,
+			);
+			name = HealthManagerTests;
+			productName = HealthManagerTests;
+			productReference = FAF84C641AAF880F00CFC255 /* HealthManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,6 +454,19 @@
 						CreatedOnToolsVersion = 6.2;
 					};
 					FAF84C171AAF7B5500CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FAF84BFF1AAF7B5500CFC255;
+					};
+					FAF84C2D1AAF7C6700CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAF84C3A1AAF7C6700CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAF84C591AAF880F00CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAF84C631AAF880F00CFC255 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = FAF84BFF1AAF7B5500CFC255;
 					};
@@ -186,6 +487,10 @@
 			targets = (
 				FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */,
 				FAF84C171AAF7B5500CFC255 /* BicycleTrackerTests */,
+				FAF84C2D1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */,
+				FAF84C3A1AAF7C6700CFC255 /* BicycleTracker WatchKit App */,
+				FAF84C591AAF880F00CFC255 /* HealthManager */,
+				FAF84C631AAF880F00CFC255 /* HealthManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +507,38 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FAF84C161AAF7B5500CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C2C1AAF7C6700CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C381AAF7C6700CFC255 /* Images.xcassets in Resources */,
+				FAF84C3C1AAF7C6700CFC255 /* BicycleTracker WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C391AAF7C6700CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C441AAF7C6700CFC255 /* Interface.storyboard in Resources */,
+				FAF84C461AAF7C6700CFC255 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C581AAF880F00CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C621AAF880F00CFC255 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,6 +566,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAF84C2A1AAF7C6700CFC255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C361AAF7C6700CFC255 /* NotificationController.swift in Sources */,
+				FAF84C341AAF7C6700CFC255 /* GaugesInterfaceController.swift in Sources */,
+				FAF84C541AAF829900CFC255 /* Configuration.swift in Sources */,
+				FAF84C521AAF825100CFC255 /* StartInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C551AAF880F00CFC255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD3C2D11AAF905E0072213F /* HKUnit+Extensions.swift in Sources */,
+				FAF84C7B1AAF882700CFC255 /* HealthManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C601AAF880F00CFC255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C6E1AAF880F00CFC255 /* HealthManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +601,31 @@
 			isa = PBXTargetDependency;
 			target = FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */;
 			targetProxy = FAF84C191AAF7B5500CFC255 /* PBXContainerItemProxy */;
+		};
+		FAF84C3E1AAF7C6700CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84C3A1AAF7C6700CFC255 /* BicycleTracker WatchKit App */;
+			targetProxy = FAF84C3D1AAF7C6700CFC255 /* PBXContainerItemProxy */;
+		};
+		FAF84C481AAF7C6700CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84C2D1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */;
+			targetProxy = FAF84C471AAF7C6700CFC255 /* PBXContainerItemProxy */;
+		};
+		FAF84C671AAF880F00CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84C591AAF880F00CFC255 /* HealthManager */;
+			targetProxy = FAF84C661AAF880F00CFC255 /* PBXContainerItemProxy */;
+		};
+		FAF84C691AAF880F00CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */;
+			targetProxy = FAF84C681AAF880F00CFC255 /* PBXContainerItemProxy */;
+		};
+		FAF84C701AAF880F00CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84C591AAF880F00CFC255 /* HealthManager */;
+			targetProxy = FAF84C6F1AAF880F00CFC255 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -254,6 +644,14 @@
 				FAF84C121AAF7B5500CFC255 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		FAF84C421AAF7C6700CFC255 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF84C431AAF7C6700CFC255 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +740,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BicycleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = BicycleTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,6 +792,135 @@
 			};
 			name = Release;
 		};
+		FAF84C4B1AAF7C6700CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = BicycleTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "BicycleTracker WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		FAF84C4C1AAF7C6700CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = BicycleTracker_WatchKit_Extension;
+				INFOPLIST_FILE = "BicycleTracker WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		FAF84C4E1AAF7C6700CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BicycleTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FAF84C4F1AAF7C6700CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BicycleTracker WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FAF84C741AAF881000CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HealthManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAF84C751AAF881000CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HealthManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FAF84C781AAF881000CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HealthManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BicycleTracker.app/BicycleTracker";
+			};
+			name = Debug;
+		};
+		FAF84C791AAF881000CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HealthManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BicycleTracker.app/BicycleTracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +940,7 @@
 				FAF84C241AAF7B5500CFC255 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAF84C251AAF7B5500CFC255 /* Build configuration list for PBXNativeTarget "BicycleTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +949,43 @@
 				FAF84C271AAF7B5500CFC255 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF84C4A1AAF7C6700CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C4B1AAF7C6700CFC255 /* Debug */,
+				FAF84C4C1AAF7C6700CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF84C4D1AAF7C6700CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C4E1AAF7C6700CFC255 /* Debug */,
+				FAF84C4F1AAF7C6700CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF84C731AAF881000CFC255 /* Build configuration list for PBXNativeTarget "HealthManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C741AAF881000CFC255 /* Debug */,
+				FAF84C751AAF881000CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF84C771AAF881000CFC255 /* Build configuration list for PBXNativeTarget "HealthManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C781AAF881000CFC255 /* Debug */,
+				FAF84C791AAF881000CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

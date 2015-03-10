@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="df8-CI-MU8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Gauges Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="GaugesInterfaceController" customModule="BicycleTracker_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Speed: 15 km/h" id="RFX-JZ-QB3"/>
+                        <label alignment="left" text="Pulse: 100 bpm" id="4gh-3I-Z1M"/>
+                        <label alignment="left" text="Distance: 10.3 km" id="nMf-ZY-Jh7"/>
+                    </items>
+                    <connections>
+                        <outlet property="distanceLabel" destination="nMf-ZY-Jh7" id="UZB-6c-D0K"/>
+                        <outlet property="pulseLabel" destination="4gh-3I-Z1M" id="bS8-7w-wbI"/>
+                        <outlet property="speedLabel" destination="RFX-JZ-QB3" id="E3S-8l-E16"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="352"/>
+        </scene>
+        <!--Start Interface Controller-->
+        <scene sceneID="cQ2-km-6S6">
+            <objects>
+                <controller id="df8-CI-MU8" customClass="StartInterfaceController" customModule="BicycleTracker_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Start" id="MWf-KQ-gfs">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" identifier="PushGaugesController" id="MDp-Be-t7y"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="startButton" destination="MWf-KQ-gfs" id="031-E5-dvZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="352"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="BicycleTracker_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

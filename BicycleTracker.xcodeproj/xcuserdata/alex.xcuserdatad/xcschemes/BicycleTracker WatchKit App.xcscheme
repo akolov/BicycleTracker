@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+               BuildableName = "BicycleTracker WatchKit App.app"
+               BlueprintName = "BicycleTracker WatchKit App"
+               ReferencedContainer = "container:BicycleTracker.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FAF84BFF1AAF7B5500CFC255"
                BuildableName = "BicycleTracker.app"
                BlueprintName = "BicycleTracker"
@@ -23,14 +37,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAF84C171AAF7B5500CFC255"
-               BuildableName = "BicycleTrackerTests.xctest"
-               BlueprintName = "BicycleTrackerTests"
+               BlueprintIdentifier = "FAF84C2D1AAF7C6700CFC255"
+               BuildableName = "BicycleTracker WatchKit Extension.appex"
+               BlueprintName = "BicycleTracker WatchKit Extension"
                ReferencedContainer = "container:BicycleTracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,16 +74,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAF84C171AAF7B5500CFC255"
-               BuildableName = "BicycleTrackerTests.xctest"
-               BlueprintName = "BicycleTrackerTests"
-               ReferencedContainer = "container:BicycleTracker.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FAF84C631AAF880F00CFC255"
                BuildableName = "HealthManagerTests.xctest"
                BlueprintName = "HealthManagerTests"
@@ -80,9 +84,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAF84BFF1AAF7B5500CFC255"
-            BuildableName = "BicycleTracker.app"
-            BlueprintName = "BicycleTracker"
+            BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+            BuildableName = "BicycleTracker WatchKit App.app"
+            BlueprintName = "BicycleTracker WatchKit App"
             ReferencedContainer = "container:BicycleTracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -96,16 +100,27 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/BicycleTracker">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAF84BFF1AAF7B5500CFC255"
-            BuildableName = "BicycleTracker.app"
-            BlueprintName = "BicycleTracker"
+            BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+            BuildableName = "BicycleTracker WatchKit App.app"
+            BlueprintName = "BicycleTracker WatchKit App"
             ReferencedContainer = "container:BicycleTracker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+            BuildableName = "BicycleTracker WatchKit App.app"
+            BlueprintName = "BicycleTracker WatchKit App"
+            ReferencedContainer = "container:BicycleTracker.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -115,16 +130,27 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/BicycleTracker">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAF84BFF1AAF7B5500CFC255"
-            BuildableName = "BicycleTracker.app"
-            BlueprintName = "BicycleTracker"
+            BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+            BuildableName = "BicycleTracker WatchKit App.app"
+            BlueprintName = "BicycleTracker WatchKit App"
             ReferencedContainer = "container:BicycleTracker.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FAF84C3A1AAF7C6700CFC255"
+            BuildableName = "BicycleTracker WatchKit App.app"
+            BlueprintName = "BicycleTracker WatchKit App"
+            ReferencedContainer = "container:BicycleTracker.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
