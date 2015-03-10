@@ -23,9 +23,17 @@ public class HealthManager {
 
   private var startDate: NSDate!
   private var stopDate: NSDate?
-  public var active: Bool {
-    return stopDate == nil
+
+  private var _updateDate: NSDate?
+  public var updateDate: NSDate? {
+    return _updateDate
   }
+
+  public var active: Bool {
+    return startDate != nil && stopDate == nil
+  }
+
+  public var error: NSError?
 
   public var speed: HKQuantity = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
   public var distance: HKQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
@@ -34,27 +42,44 @@ public class HealthManager {
   private let pedometer = CMPedometer()
 
   public func start() {
+    if startDate != nil {
+      return
+    }
+
     startDate = NSDate()
+
+    NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
+
     pedometer.startPedometerUpdatesFromDate(startDate) { data, error in
-      let now = NSDate()
+      self._updateDate = NSDate()
       if data == nil {
-        println("ERROR: \(error)")
+        self.error = error
+        NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
       else {
         self.distance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: data.distance.doubleValue ?? 0)
-        let speedValue = self.distance.doubleValueForUnit(HKUnit.meterUnit()) / (now.timeIntervalSinceDate(self.startDate))
+        let speedValue = self.distance.doubleValueForUnit(HKUnit.meterUnit()) / (self._updateDate!.timeIntervalSinceDate(self.startDate))
         self.speed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: speedValue)
-        self.probeHeartRate(now)
+        self.probeHeartRate(self._updateDate!)
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
     }
   }
 
   public func stop() {
+    if startDate == nil {
+      return
+    }
+
     stopDate = NSDate()
     pedometer.stopPedometerUpdates()
+
     saveWorkout()
     reset()
+
+    startDate = nil
+    stopDate = nil
+    _updateDate = nil
   }
 
   public func probeHeartRate(date: NSDate) {

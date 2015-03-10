@@ -26,13 +26,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-if-zT9">
-                                <rect key="frame" x="266" y="85.5" width="69" height="20.5"/>
+                                <rect key="frame" x="266" y="85" width="69" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L90-R1-WlZ">
-                                <rect key="frame" x="253" y="115.5" width="94" height="20.5"/>
+                                <rect key="frame" x="253" y="115" width="94" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -43,20 +43,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-MR-PJW">
+                                <rect key="frame" x="272" y="577.5" width="56" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Bil-kN-TEv" secondAttribute="centerX" id="4fI-Bm-jeG"/>
                             <constraint firstItem="R7M-bu-QhC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="OXX-XQ-XuE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bil-kN-TEv" secondAttribute="bottom" constant="100" id="aX1-7j-fev"/>
+                            <constraint firstAttribute="centerX" secondItem="egD-MR-PJW" secondAttribute="centerX" id="bPL-ZK-Adg"/>
                             <constraint firstItem="6pr-if-zT9" firstAttribute="top" secondItem="R7M-bu-QhC" secondAttribute="bottom" constant="10" id="jU5-dc-YBS"/>
                             <constraint firstAttribute="centerX" secondItem="L90-R1-WlZ" secondAttribute="centerX" id="kc5-kY-bgd"/>
                             <constraint firstAttribute="centerX" secondItem="6pr-if-zT9" secondAttribute="centerX" id="kjg-wf-r71"/>
                             <constraint firstAttribute="centerX" secondItem="R7M-bu-QhC" secondAttribute="centerX" id="nzF-Hc-3rO"/>
                             <constraint firstItem="L90-R1-WlZ" firstAttribute="top" secondItem="6pr-if-zT9" secondAttribute="bottom" constant="10" id="otH-k3-fE3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="egD-MR-PJW" secondAttribute="bottom" constant="10" id="rS9-pF-Mji"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="debugLabel" destination="egD-MR-PJW" id="2Sj-yf-Aag"/>
                         <outlet property="distanceLabel" destination="L90-R1-WlZ" id="gOF-wZ-LY5"/>
                         <outlet property="pulseLabel" destination="6pr-if-zT9" id="f6q-Rx-R6m"/>
                         <outlet property="speedLabel" destination="R7M-bu-QhC" id="DIp-8U-S6N"/>

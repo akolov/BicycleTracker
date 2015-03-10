@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Alexander Kolov. All rights reserved.
 //
 
+import CoreMotion
 import HealthManager
 import UIKit
 
@@ -15,6 +16,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var pulseLabel: UILabel!
   @IBOutlet weak var distanceLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
+  @IBOutlet weak var debugLabel: UILabel!
 
   private var observer: AnyObject?
 
@@ -24,20 +26,27 @@ class ViewController: UIViewController {
     }
   }
 
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    startButton.setTitle(NSLocalizedString("Start", comment: "Start button title"), forState: .Normal)
-    startButton.setTitle(NSLocalizedString("Stop", comment: "Stop button title"), forState: .Selected)
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    startButton.setTitle(NSLocalizedString("Start", comment: "Start button title"), forState: .Normal)
+    startButton.setTitle(NSLocalizedString("Stop", comment: "Stop button title"), forState: .Selected)
 
     observer = NSNotificationCenter.defaultCenter().addObserverForName(HealthManagerDidUpdateNotification, object: nil, queue: NSOperationQueue.mainQueue()) { note in
       self.speedLabel.text = "\(HealthManager.sharedInstance.heartRate)"
       self.pulseLabel.text = "\(HealthManager.sharedInstance.heartRate)"
       self.distanceLabel.text = "\(HealthManager.sharedInstance.distance)"
+
+      if let error = HealthManager.sharedInstance.error {
+        self.debugLabel.text = "\(error)"
+      }
+      else if let update = HealthManager.sharedInstance.updateDate {
+        self.debugLabel.text = "Last update: \(update)"
+      }
     }
+
+    let distanceAvailable = CMPedometer.isDistanceAvailable() ? "Distance available" : "Distance not available"
+    debugLabel.text = "\(distanceAvailable)"
   }
 
   override func didReceiveMemoryWarning() {
