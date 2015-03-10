@@ -15,6 +15,7 @@ class GaugesInterfaceController: WKInterfaceController {
   @IBOutlet weak var speedLabel: WKInterfaceLabel!
   @IBOutlet weak var pulseLabel: WKInterfaceLabel!
   @IBOutlet weak var distanceLabel: WKInterfaceLabel!
+  @IBOutlet weak var stopButton: WKInterfaceButton!
 
   private var observer: AnyObject?
 
@@ -41,6 +42,11 @@ class GaugesInterfaceController: WKInterfaceController {
   override func didDeactivate() {
     // This method is called when watch view controller is no longer visible
     super.didDeactivate()
+  }
+
+  @IBAction func didTapStopButton() {
+    HealthManager.sharedInstance.stop()
+    popToRootController()
   }
 
 }

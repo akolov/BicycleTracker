@@ -13,11 +13,17 @@
                         <label alignment="left" text="Speed: 15 km/h" id="RFX-JZ-QB3"/>
                         <label alignment="left" text="Pulse: 100 bpm" id="4gh-3I-Z1M"/>
                         <label alignment="left" text="Distance: 10.3 km" id="nMf-ZY-Jh7"/>
+                        <button width="1" alignment="left" title="Stop" id="ZlI-FJ-BAQ">
+                            <connections>
+                                <action selector="didTapStopButton" destination="AgC-eL-Hgc" id="eyH-5i-RTc"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="distanceLabel" destination="nMf-ZY-Jh7" id="UZB-6c-D0K"/>
                         <outlet property="pulseLabel" destination="4gh-3I-Z1M" id="bS8-7w-wbI"/>
                         <outlet property="speedLabel" destination="RFX-JZ-QB3" id="E3S-8l-E16"/>
+                        <outlet property="stopButton" destination="ZlI-FJ-BAQ" id="BcZ-fP-EPD"/>
                     </connections>
                 </controller>
             </objects>
