@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAF84C061AAF7B5500CFC255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */; };
+		FAF84C091AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C071AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld */; };
+		FAF84C0B1AAF7B5500CFC255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C0A1AAF7B5500CFC255 /* ViewController.swift */; };
+		FAF84C0E1AAF7B5500CFC255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C0C1AAF7B5500CFC255 /* Main.storyboard */; };
+		FAF84C101AAF7B5500CFC255 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C0F1AAF7B5500CFC255 /* Images.xcassets */; };
+		FAF84C131AAF7B5500CFC255 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF84C111AAF7B5500CFC255 /* LaunchScreen.xib */; };
+		FAF84C1F1AAF7B5500CFC255 /* BicycleTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C1E1AAF7B5500CFC255 /* BicycleTrackerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAF84C191AAF7B5500CFC255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAF84BF81AAF7B5500CFC255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAF84BFF1AAF7B5500CFC255;
+			remoteInfo = BicycleTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C041AAF7B5500CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAF84C081AAF7B5500CFC255 /* BicycleTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BicycleTracker.xcdatamodel; sourceTree = "<group>"; };
+		FAF84C0A1AAF7B5500CFC255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAF84C0D1AAF7B5500CFC255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAF84C0F1AAF7B5500CFC255 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAF84C121AAF7B5500CFC255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BicycleTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF84C1D1AAF7B5500CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF84C1E1AAF7B5500CFC255 /* BicycleTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicycleTrackerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAF84BFD1AAF7B5500CFC255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C151AAF7B5500CFC255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAF84BF71AAF7B5500CFC255 = {
+			isa = PBXGroup;
+			children = (
+				FAF84C021AAF7B5500CFC255 /* BicycleTracker */,
+				FAF84C1B1AAF7B5500CFC255 /* BicycleTrackerTests */,
+				FAF84C011AAF7B5500CFC255 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAF84C011AAF7B5500CFC255 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */,
+				FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAF84C021AAF7B5500CFC255 /* BicycleTracker */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */,
+				FAF84C0A1AAF7B5500CFC255 /* ViewController.swift */,
+				FAF84C0C1AAF7B5500CFC255 /* Main.storyboard */,
+				FAF84C0F1AAF7B5500CFC255 /* Images.xcassets */,
+				FAF84C111AAF7B5500CFC255 /* LaunchScreen.xib */,
+				FAF84C071AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld */,
+				FAF84C031AAF7B5500CFC255 /* Supporting Files */,
+			);
+			path = BicycleTracker;
+			sourceTree = "<group>";
+		};
+		FAF84C031AAF7B5500CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C041AAF7B5500CFC255 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAF84C1B1AAF7B5500CFC255 /* BicycleTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C1E1AAF7B5500CFC255 /* BicycleTrackerTests.swift */,
+				FAF84C1C1AAF7B5500CFC255 /* Supporting Files */,
+			);
+			path = BicycleTrackerTests;
+			sourceTree = "<group>";
+		};
+		FAF84C1C1AAF7B5500CFC255 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF84C1D1AAF7B5500CFC255 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C221AAF7B5500CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker" */;
+			buildPhases = (
+				FAF84BFC1AAF7B5500CFC255 /* Sources */,
+				FAF84BFD1AAF7B5500CFC255 /* Frameworks */,
+				FAF84BFE1AAF7B5500CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BicycleTracker;
+			productName = BicycleTracker;
+			productReference = FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAF84C171AAF7B5500CFC255 /* BicycleTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF84C251AAF7B5500CFC255 /* Build configuration list for PBXNativeTarget "BicycleTrackerTests" */;
+			buildPhases = (
+				FAF84C141AAF7B5500CFC255 /* Sources */,
+				FAF84C151AAF7B5500CFC255 /* Frameworks */,
+				FAF84C161AAF7B5500CFC255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAF84C1A1AAF7B5500CFC255 /* PBXTargetDependency */,
+			);
+			name = BicycleTrackerTests;
+			productName = BicycleTrackerTests;
+			productReference = FAF84C181AAF7B5500CFC255 /* BicycleTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAF84BF81AAF7B5500CFC255 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Alexander Kolov";
+				TargetAttributes = {
+					FAF84BFF1AAF7B5500CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					FAF84C171AAF7B5500CFC255 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = FAF84BFF1AAF7B5500CFC255;
+					};
+				};
+			};
+			buildConfigurationList = FAF84BFB1AAF7B5500CFC255 /* Build configuration list for PBXProject "BicycleTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAF84BF71AAF7B5500CFC255;
+			productRefGroup = FAF84C011AAF7B5500CFC255 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */,
+				FAF84C171AAF7B5500CFC255 /* BicycleTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAF84BFE1AAF7B5500CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C0E1AAF7B5500CFC255 /* Main.storyboard in Resources */,
+				FAF84C131AAF7B5500CFC255 /* LaunchScreen.xib in Resources */,
+				FAF84C101AAF7B5500CFC255 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C161AAF7B5500CFC255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAF84BFC1AAF7B5500CFC255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C0B1AAF7B5500CFC255 /* ViewController.swift in Sources */,
+				FAF84C091AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld in Sources */,
+				FAF84C061AAF7B5500CFC255 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAF84C141AAF7B5500CFC255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAF84C1F1AAF7B5500CFC255 /* BicycleTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAF84C1A1AAF7B5500CFC255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAF84BFF1AAF7B5500CFC255 /* BicycleTracker */;
+			targetProxy = FAF84C191AAF7B5500CFC255 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAF84C0C1AAF7B5500CFC255 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF84C0D1AAF7B5500CFC255 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAF84C111AAF7B5500CFC255 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF84C121AAF7B5500CFC255 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAF84C201AAF7B5500CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAF84C211AAF7B5500CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAF84C231AAF7B5500CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BicycleTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAF84C241AAF7B5500CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BicycleTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FAF84C261AAF7B5500CFC255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BicycleTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BicycleTracker.app/BicycleTracker";
+			};
+			name = Debug;
+		};
+		FAF84C271AAF7B5500CFC255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BicycleTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BicycleTracker.app/BicycleTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAF84BFB1AAF7B5500CFC255 /* Build configuration list for PBXProject "BicycleTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C201AAF7B5500CFC255 /* Debug */,
+				FAF84C211AAF7B5500CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAF84C221AAF7B5500CFC255 /* Build configuration list for PBXNativeTarget "BicycleTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C231AAF7B5500CFC255 /* Debug */,
+				FAF84C241AAF7B5500CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAF84C251AAF7B5500CFC255 /* Build configuration list for PBXNativeTarget "BicycleTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF84C261AAF7B5500CFC255 /* Debug */,
+				FAF84C271AAF7B5500CFC255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAF84C071AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAF84C081AAF7B5500CFC255 /* BicycleTracker.xcdatamodel */,
+			);
+			currentVersion = FAF84C081AAF7B5500CFC255 /* BicycleTracker.xcdatamodel */;
+			path = BicycleTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAF84BF81AAF7B5500CFC255 /* Project object */;
+}
