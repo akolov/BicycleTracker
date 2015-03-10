@@ -6,13 +6,14 @@
 //  Copyright (c) 2015 Alexander Kolov. All rights reserved.
 //
 
+import CoreLocation
 import CoreMotion
 import Foundation
 import HealthKit
 
 public let HealthManagerDidUpdateNotification = "HealthManagerDidUpdateNotification"
 
-public class HealthManager {
+public class HealthManager: NSObject, CLLocationManagerDelegate {
 
   public class var sharedInstance: HealthManager {
     struct Static {
@@ -35,11 +36,23 @@ public class HealthManager {
 
   public var error: NSError?
 
-  public var speed: HKQuantity = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
-  public var distance: HKQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
+  private let pedometer = CMPedometer()
+  public var motionSpeed: HKQuantity = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
+  public var motionDistance: HKQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
+
   public var heartRate: HKQuantity = HKQuantity(unit: HKUnit.heartBeatsPerMinuteUnit(), doubleValue: 0)
 
-  private let pedometer = CMPedometer()
+  private lazy var locationManager: CLLocationManager = {
+    let manager = CLLocationManager()
+    manager.desiredAccuracy = kCLLocationAccuracyBest
+    manager.distanceFilter = kCLDistanceFilterNone
+    manager.delegate = self
+    return manager
+  }()
+
+  private var lastLocation: CLLocation?
+  public var locationSpeed: HKQuantity = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
+  public var locationDistance: HKQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
 
   public func start() {
     if startDate != nil {
@@ -50,6 +63,8 @@ public class HealthManager {
 
     NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
 
+    locationManager.startUpdatingLocation()
+
     pedometer.startPedometerUpdatesFromDate(startDate) { data, error in
       self._updateDate = NSDate()
       if data == nil {
@@ -57,9 +72,9 @@ public class HealthManager {
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
       else {
-        self.distance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: data.distance.doubleValue ?? 0)
-        let speedValue = self.distance.doubleValueForUnit(HKUnit.meterUnit()) / (self._updateDate!.timeIntervalSinceDate(self.startDate))
-        self.speed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: speedValue)
+        self.motionDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: data.distance.doubleValue ?? 0)
+        let speedValue = data.distance.doubleValue / (self._updateDate!.timeIntervalSinceDate(self.startDate))
+        self.motionSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: speedValue)
         self.probeHeartRate(self._updateDate!)
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
@@ -73,6 +88,7 @@ public class HealthManager {
 
     stopDate = NSDate()
     pedometer.stopPedometerUpdates()
+    locationManager.stopUpdatingLocation()
 
     saveWorkout()
     reset()
@@ -97,7 +113,7 @@ public class HealthManager {
     let predicate = HKQuery.predicateForSamplesWithStartDate(startDate, endDate: date, options: .StrictStartDate)
     let query = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: 1, sortDescriptors: nil) { query, results, error in
       if let sample = results.first as? HKQuantitySample {
-        self.distance = sample.quantity
+        self.motionDistance = sample.quantity
       }
     }
   }
@@ -107,9 +123,25 @@ public class HealthManager {
   }
 
   public func reset() {
-    speed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
-    distance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
+    motionSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
+    motionDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
+    locationSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
+    locationDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
     heartRate = HKQuantity(unit: HKUnit.heartBeatsPerMinuteUnit(), doubleValue: 0)
+  }
+
+  // MARK: CLLocationManagerDelegate
+
+  public func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    if let location = locations.last as? CLLocation {
+      locationSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: location.speed ?? 0)
+
+      if let lastLocation = lastLocation {
+        locationDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: location.distanceFromLocation(lastLocation))
+      }
+
+      lastLocation = location
+    }
   }
 
 }

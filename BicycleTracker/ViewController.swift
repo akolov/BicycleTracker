@@ -13,7 +13,7 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var speedLabel: UILabel!
-  @IBOutlet weak var pulseLabel: UILabel!
+  @IBOutlet weak var heartRateLabel: UILabel!
   @IBOutlet weak var distanceLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var debugLabel: UILabel!
@@ -33,9 +33,9 @@ class ViewController: UIViewController {
     startButton.setTitle(NSLocalizedString("Stop", comment: "Stop button title"), forState: .Selected)
 
     observer = NSNotificationCenter.defaultCenter().addObserverForName(HealthManagerDidUpdateNotification, object: nil, queue: NSOperationQueue.mainQueue()) { note in
-      self.speedLabel.text = "\(HealthManager.sharedInstance.heartRate)"
-      self.pulseLabel.text = "\(HealthManager.sharedInstance.heartRate)"
-      self.distanceLabel.text = "\(HealthManager.sharedInstance.distance)"
+      self.speedLabel.text = "\(HealthManager.sharedInstance.motionSpeed)"
+      self.heartRateLabel.text = "\(HealthManager.sharedInstance.heartRate)"
+      self.distanceLabel.text = "\(HealthManager.sharedInstance.motionDistance)"
 
       if let error = HealthManager.sharedInstance.error {
         self.debugLabel.text = "\(error)"

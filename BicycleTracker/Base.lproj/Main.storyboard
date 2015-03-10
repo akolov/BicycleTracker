@@ -70,7 +70,7 @@
                     <connections>
                         <outlet property="debugLabel" destination="egD-MR-PJW" id="2Sj-yf-Aag"/>
                         <outlet property="distanceLabel" destination="L90-R1-WlZ" id="gOF-wZ-LY5"/>
-                        <outlet property="pulseLabel" destination="6pr-if-zT9" id="f6q-Rx-R6m"/>
+                        <outlet property="heartRateLabel" destination="6pr-if-zT9" id="9Pd-0C-gVE"/>
                         <outlet property="speedLabel" destination="R7M-bu-QhC" id="DIp-8U-S6N"/>
                         <outlet property="startButton" destination="Bil-kN-TEv" id="nvn-FT-0CT"/>
                     </connections>

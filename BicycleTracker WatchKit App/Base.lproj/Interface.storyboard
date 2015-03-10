@@ -21,7 +21,7 @@
                     </items>
                     <connections>
                         <outlet property="distanceLabel" destination="nMf-ZY-Jh7" id="UZB-6c-D0K"/>
-                        <outlet property="pulseLabel" destination="4gh-3I-Z1M" id="bS8-7w-wbI"/>
+                        <outlet property="heartRateLabel" destination="4gh-3I-Z1M" id="R6g-kR-f0h"/>
                         <outlet property="speedLabel" destination="RFX-JZ-QB3" id="E3S-8l-E16"/>
                         <outlet property="stopButton" destination="ZlI-FJ-BAQ" id="BcZ-fP-EPD"/>
                     </connections>

@@ -13,7 +13,7 @@ import WatchKit
 class GaugesInterfaceController: WKInterfaceController {
 
   @IBOutlet weak var speedLabel: WKInterfaceLabel!
-  @IBOutlet weak var pulseLabel: WKInterfaceLabel!
+  @IBOutlet weak var heartRateLabel: WKInterfaceLabel!
   @IBOutlet weak var distanceLabel: WKInterfaceLabel!
   @IBOutlet weak var stopButton: WKInterfaceButton!
 
@@ -28,9 +28,9 @@ class GaugesInterfaceController: WKInterfaceController {
   override func awakeWithContext(context: AnyObject?) {
     super.awakeWithContext(context)
     observer = NSNotificationCenter.defaultCenter().addObserverForName(HealthManagerDidUpdateNotification, object: nil, queue: NSOperationQueue.mainQueue()) { note in
-      self.speedLabel.setText("\(HealthManager.sharedInstance.heartRate)")
-      self.pulseLabel.setText("\(HealthManager.sharedInstance.heartRate)")
-      self.distanceLabel.setText("\(HealthManager.sharedInstance.distance)")
+      self.speedLabel.setText("\(HealthManager.sharedInstance.motionSpeed)")
+      self.heartRateLabel.setText("\(HealthManager.sharedInstance.heartRate)")
+      self.distanceLabel.setText("\(HealthManager.sharedInstance.motionDistance)")
     }
   }
 
