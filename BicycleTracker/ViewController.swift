@@ -72,8 +72,9 @@ class ViewController: UIViewController {
       startButton.selected = false
     }
     else {
-      HealthManager.sharedInstance.start()
-      startButton.selected = true
+      HealthManager.sharedInstance.start() {
+        self.startButton.selected = true
+      }
     }
   }
 

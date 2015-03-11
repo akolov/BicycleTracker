@@ -60,8 +60,20 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
   public var locationSpeed: HKQuantity = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: 0)
   public var locationDistance: HKQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 0)
 
-  public func start() {
+  private var startCompletion: (() -> Void)?
+
+  public func start(completion: (() -> Void)? = nil) {
     if startDate != nil {
+      return
+    }
+
+    startCompletion = completion
+
+    if CLLocationManager.authorizationStatus() == .NotDetermined {
+      locationManager.requestAlwaysAuthorization()
+      return
+    }
+    else if CLLocationManager.authorizationStatus() != .AuthorizedAlways {
       return
     }
 
@@ -85,6 +97,9 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
     }
+
+    startCompletion?()
+    startCompletion = nil
   }
 
   public func stop() {
@@ -162,6 +177,12 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
   public func locationManager(manager: CLLocationManager!, didFinishDeferredUpdatesWithError error: NSError!) {
     self.error = error
     NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
+  }
+
+  public func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    if status == .AuthorizedAlways {
+      start()
+    }
   }
 
 }

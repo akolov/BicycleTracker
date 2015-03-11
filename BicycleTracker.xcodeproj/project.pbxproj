@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAD3C2D11AAF905E0072213F /* HKUnit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD3C2D01AAF905E0072213F /* HKUnit+Extensions.swift */; };
+		FAEF7DBA1AB0F5460059EA4B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEF7DB91AB0F5460059EA4B /* CoreLocation.framework */; };
 		FAF84C061AAF7B5500CFC255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */; };
 		FAF84C091AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C071AAF7B5500CFC255 /* BicycleTracker.xcdatamodeld */; };
 		FAF84C0B1AAF7B5500CFC255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF84C0A1AAF7B5500CFC255 /* ViewController.swift */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		FAD3C2D01AAF905E0072213F /* HKUnit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKUnit+Extensions.swift"; sourceTree = "<group>"; };
+		FAEF7DB91AB0F5460059EA4B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FAF84C001AAF7B5500CFC255 /* BicycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF84C041AAF7B5500CFC255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF84C051AAF7B5500CFC255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEF7DBA1AB0F5460059EA4B /* CoreLocation.framework in Frameworks */,
 				FAF84C711AAF880F00CFC255 /* HealthManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +183,7 @@
 		FAF84BF71AAF7B5500CFC255 = {
 			isa = PBXGroup;
 			children = (
+				FAEF7DB91AB0F5460059EA4B /* CoreLocation.framework */,
 				FAF84C021AAF7B5500CFC255 /* BicycleTracker */,
 				FAF84C1B1AAF7B5500CFC255 /* BicycleTrackerTests */,
 				FAF84C2F1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */,
@@ -452,6 +456,11 @@
 				TargetAttributes = {
 					FAF84BFF1AAF7B5500CFC255 = {
 						CreatedOnToolsVersion = 6.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					FAF84C171AAF7B5500CFC255 = {
 						CreatedOnToolsVersion = 6.2;
