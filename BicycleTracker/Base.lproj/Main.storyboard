@@ -26,14 +26,14 @@
                                     <action selector="didTapStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ok-lb-hLM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pulse: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-if-zT9">
-                                <rect key="frame" x="266" y="85" width="69" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L90-R1-WlZ">
+                                <rect key="frame" x="253" y="111" width="94" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L90-R1-WlZ">
-                                <rect key="frame" x="253" y="115" width="94" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz7-VU-HPm">
+                                <rect key="frame" x="253" y="139" width="94" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,9 +44,21 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-MR-PJW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S94-bh-Iq9">
+                                <rect key="frame" x="262" y="83" width="76.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egD-MR-PJW">
                                 <rect key="frame" x="272" y="578" width="56" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pulse: —" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-if-zT9">
+                                <rect key="frame" x="266" y="167" width="69" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,29 +66,36 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Bil-kN-TEv" secondAttribute="centerX" id="4fI-Bm-jeG"/>
+                            <constraint firstItem="Xz7-VU-HPm" firstAttribute="top" secondItem="L90-R1-WlZ" secondAttribute="bottom" constant="7.5" id="8TL-UA-oH2"/>
+                            <constraint firstItem="S94-bh-Iq9" firstAttribute="top" secondItem="R7M-bu-QhC" secondAttribute="bottom" constant="7.5" id="AvC-4w-MZ5"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="egD-MR-PJW" secondAttribute="trailing" id="GVM-Vx-ZdK"/>
                             <constraint firstItem="egD-MR-PJW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IGx-xT-MUl"/>
                             <constraint firstItem="R7M-bu-QhC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="OXX-XQ-XuE"/>
+                            <constraint firstItem="6pr-if-zT9" firstAttribute="top" secondItem="Xz7-VU-HPm" secondAttribute="bottom" constant="7.5" id="TUf-jW-WOG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bil-kN-TEv" secondAttribute="bottom" constant="100" id="aX1-7j-fev"/>
                             <constraint firstAttribute="centerX" secondItem="egD-MR-PJW" secondAttribute="centerX" id="bPL-ZK-Adg"/>
-                            <constraint firstItem="6pr-if-zT9" firstAttribute="top" secondItem="R7M-bu-QhC" secondAttribute="bottom" constant="10" id="jU5-dc-YBS"/>
+                            <constraint firstItem="L90-R1-WlZ" firstAttribute="top" secondItem="S94-bh-Iq9" secondAttribute="bottom" constant="7.5" id="jdE-oV-dkb"/>
                             <constraint firstAttribute="centerX" secondItem="L90-R1-WlZ" secondAttribute="centerX" id="kc5-kY-bgd"/>
-                            <constraint firstAttribute="centerX" secondItem="6pr-if-zT9" secondAttribute="centerX" id="kjg-wf-r71"/>
+                            <constraint firstAttribute="centerX" secondItem="6pr-if-zT9" secondAttribute="centerX" constant="-3.5" id="kjg-wf-r71"/>
+                            <constraint firstAttribute="centerX" secondItem="Xz7-VU-HPm" secondAttribute="centerX" id="nKs-NR-27T"/>
                             <constraint firstAttribute="centerX" secondItem="R7M-bu-QhC" secondAttribute="centerX" id="nzF-Hc-3rO"/>
-                            <constraint firstItem="L90-R1-WlZ" firstAttribute="top" secondItem="6pr-if-zT9" secondAttribute="bottom" constant="10" id="otH-k3-fE3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="egD-MR-PJW" secondAttribute="bottom" constant="10" id="rS9-pF-Mji"/>
+                            <constraint firstAttribute="centerX" secondItem="S94-bh-Iq9" secondAttribute="centerX" id="vBQ-US-xQn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="debugLabel" destination="egD-MR-PJW" id="2Sj-yf-Aag"/>
-                        <outlet property="distanceLabel" destination="L90-R1-WlZ" id="gOF-wZ-LY5"/>
                         <outlet property="heartRateLabel" destination="6pr-if-zT9" id="9Pd-0C-gVE"/>
-                        <outlet property="speedLabel" destination="R7M-bu-QhC" id="DIp-8U-S6N"/>
+                        <outlet property="locationDistanceLabel" destination="Xz7-VU-HPm" id="wXe-jw-KOD"/>
+                        <outlet property="locationSpeedLabel" destination="S94-bh-Iq9" id="ey4-U3-2dt"/>
+                        <outlet property="motionDistanceLabel" destination="L90-R1-WlZ" id="zii-a1-Hoh"/>
+                        <outlet property="motionSpeedLabel" destination="R7M-bu-QhC" id="mWf-p4-VZ5"/>
                         <outlet property="startButton" destination="Bil-kN-TEv" id="nvn-FT-0CT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="657.5"/>
         </scene>
     </scenes>
 </document>

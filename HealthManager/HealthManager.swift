@@ -25,9 +25,14 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
   private var startDate: NSDate!
   private var stopDate: NSDate?
 
-  private var _updateDate: NSDate?
-  public var updateDate: NSDate? {
-    return _updateDate
+  private var _motionUpdateDate: NSDate?
+  public var motionUpdateDate: NSDate? {
+    return _motionUpdateDate
+  }
+
+  private var _locationUpdateDate: NSDate?
+  public var locationUpdateDate: NSDate? {
+    return _locationUpdateDate
   }
 
   public var active: Bool {
@@ -44,9 +49,10 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
 
   private lazy var locationManager: CLLocationManager = {
     let manager = CLLocationManager()
-    manager.desiredAccuracy = kCLLocationAccuracyBest
-    manager.distanceFilter = kCLDistanceFilterNone
+    manager.activityType = CLActivityType.Fitness
     manager.delegate = self
+    manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+    manager.distanceFilter = kCLDistanceFilterNone
     return manager
   }()
 
@@ -66,16 +72,16 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
     locationManager.startUpdatingLocation()
 
     pedometer.startPedometerUpdatesFromDate(startDate) { data, error in
-      self._updateDate = NSDate()
+      self._motionUpdateDate = NSDate()
       if data == nil {
         self.error = error
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
       else {
         self.motionDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: data.distance.doubleValue ?? 0)
-        let speedValue = data.distance.doubleValue / (self._updateDate!.timeIntervalSinceDate(self.startDate))
+        let speedValue = data.distance.doubleValue / (self._motionUpdateDate!.timeIntervalSinceDate(self.startDate))
         self.motionSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: speedValue)
-        self.probeHeartRate(self._updateDate!)
+        self.probeHeartRate(self._motionUpdateDate!)
         NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
       }
     }
@@ -95,7 +101,8 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
 
     startDate = nil
     stopDate = nil
-    _updateDate = nil
+    _motionUpdateDate = nil
+    _locationUpdateDate = nil
   }
 
   public func probeHeartRate(date: NSDate) {
@@ -141,7 +148,20 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
       }
 
       lastLocation = location
+      _locationUpdateDate = NSDate()
+
+      NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
     }
+  }
+
+  public func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    self.error = error
+    NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
+  }
+
+  public func locationManager(manager: CLLocationManager!, didFinishDeferredUpdatesWithError error: NSError!) {
+    self.error = error
+    NSNotificationCenter.defaultCenter().postNotificationName(HealthManagerDidUpdateNotification, object: nil)
   }
 
 }

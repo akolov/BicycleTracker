@@ -6,15 +6,18 @@
 //  Copyright (c) 2015 Alexander Kolov. All rights reserved.
 //
 
+import CoreLocation
 import CoreMotion
 import HealthManager
 import UIKit
 
 class ViewController: UIViewController {
 
-  @IBOutlet weak var speedLabel: UILabel!
+  @IBOutlet weak var motionSpeedLabel: UILabel!
+  @IBOutlet weak var motionDistanceLabel: UILabel!
+  @IBOutlet weak var locationSpeedLabel: UILabel!
+  @IBOutlet weak var locationDistanceLabel: UILabel!
   @IBOutlet weak var heartRateLabel: UILabel!
-  @IBOutlet weak var distanceLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var debugLabel: UILabel!
 
@@ -33,20 +36,27 @@ class ViewController: UIViewController {
     startButton.setTitle(NSLocalizedString("Stop", comment: "Stop button title"), forState: .Selected)
 
     observer = NSNotificationCenter.defaultCenter().addObserverForName(HealthManagerDidUpdateNotification, object: nil, queue: NSOperationQueue.mainQueue()) { note in
-      self.speedLabel.text = "\(HealthManager.sharedInstance.motionSpeed)"
+      self.motionSpeedLabel.text = "Motion speed: \(HealthManager.sharedInstance.motionSpeed)"
+      self.motionDistanceLabel.text = "Motion distance: \(HealthManager.sharedInstance.motionDistance)"
+
+      self.locationSpeedLabel.text = "Location speed: \(HealthManager.sharedInstance.locationSpeed)"
+      self.locationDistanceLabel.text = "Location distance: \(HealthManager.sharedInstance.locationDistance)"
+
       self.heartRateLabel.text = "\(HealthManager.sharedInstance.heartRate)"
-      self.distanceLabel.text = "\(HealthManager.sharedInstance.motionDistance)"
 
       if let error = HealthManager.sharedInstance.error {
         self.debugLabel.text = "\(error)"
       }
-      else if let update = HealthManager.sharedInstance.updateDate {
-        self.debugLabel.text = "Last update: \(update)"
+      else {
+        let motionUpdate = HealthManager.sharedInstance.motionUpdateDate
+        let locationUpdate = HealthManager.sharedInstance.locationUpdateDate
+        self.debugLabel.text = "Last motion update: - \(motionUpdate)\nLast location update: - \(locationUpdate)"
       }
     }
 
-    let distanceAvailable = CMPedometer.isDistanceAvailable() ? "Distance available" : "Distance not available"
-    debugLabel.text = "\(distanceAvailable)"
+    let distanceAvailable = CMPedometer.isDistanceAvailable() ? "Distance information available" : "Distance information not available"
+    let locationAvailable = CLLocationManager.locationServicesEnabled() ? "Location services are enabled" : "Location services are disabled"
+    debugLabel.text = "\(distanceAvailable), \(locationAvailable)"
   }
 
   override func didReceiveMemoryWarning() {
