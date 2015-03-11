@@ -180,16 +180,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FAF84BF71AAF7B5500CFC255 = {
+		FAEF7DBB1AB0FA8B0059EA4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FAEF7DB91AB0F5460059EA4B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAF84BF71AAF7B5500CFC255 = {
+			isa = PBXGroup;
+			children = (
 				FAF84C021AAF7B5500CFC255 /* BicycleTracker */,
 				FAF84C1B1AAF7B5500CFC255 /* BicycleTrackerTests */,
 				FAF84C2F1AAF7C6700CFC255 /* BicycleTracker WatchKit Extension */,
 				FAF84C3F1AAF7C6700CFC255 /* BicycleTracker WatchKit App */,
 				FAF84C5B1AAF880F00CFC255 /* HealthManager */,
 				FAF84C6A1AAF880F00CFC255 /* HealthManagerTests */,
+				FAEF7DBB1AB0FA8B0059EA4B /* Frameworks */,
 				FAF84C011AAF7B5500CFC255 /* Products */,
 			);
 			sourceTree = "<group>";
