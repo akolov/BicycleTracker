@@ -159,7 +159,9 @@ public class HealthManager: NSObject, CLLocationManagerDelegate {
       locationSpeed = HKQuantity(unit: HKUnit.metersPerSecondUnit(), doubleValue: location.speed ?? 0)
 
       if let lastLocation = lastLocation {
-        locationDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: location.distanceFromLocation(lastLocation))
+        let distance = locationDistance.doubleValueForUnit(HKUnit.meterUnit())
+        let delta = location.distanceFromLocation(lastLocation)
+        locationDistance = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: distance + delta)
       }
 
       lastLocation = location
